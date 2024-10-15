@@ -16,7 +16,8 @@ def main():
 
         screen.fill((0,0,0))
         pygame.display.flip()
-        dt = (clock.tick(60)/1000)
+        clock.tick(60)  # This limits the frame rate to 60 FPS
+        dt = clock.get_time() / 1000  # This gets the time passed in seconds
 
 
 
